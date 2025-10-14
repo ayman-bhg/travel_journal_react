@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+}
+
+/* Header */
+header {
+    background: #f55a5a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-weight: 800;
+    font-size: 1.6rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Article Card */
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    color: #22227f;
+    max-width: 1000px;
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+}
+
+/* Hover effect */
+article:hover {
+    transform: translateY(-6px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+    background-color: #fdfdfd; 
+}
+
+
+/* Image Section */
+.image .card {
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    transition: transform 0.4s ease; 
+}
+
+article:hover .image .card {
+    transform: scale(1.05);
+}
+/* Text Section */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    flex: 1;
+}
+
+/* Location / Header Area */
+.location {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.8rem;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+}
+
+.country {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.map-link {
+    color: #888;
+    font-size: 0.98rem;
+    font-weight: 500;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.map-link:hover {
+    color: #f55a5a;
+}
+
+/* Title */
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #22227f;
+}
+
+/* Details */
+.dates {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image .card {
+        width: 100%;
+        height: 250px;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .location {
+        justify-content: center;
+    }
+}
